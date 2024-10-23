@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memórias Escolares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Memórias Escolares</h1>
+            <p>Reviva os momentos inesquecíveis da minha jornada escolar.</p>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="photo" onclick="openModal('foto1.jpg', 'tiramos essa foto apenas para colocar no trabalho – momentos especiais em sala de aula 🥰😂.')">
+            <img src="foto1.jpg" alt="Foto com amigos e professor">
+        </div>
+        <div class="photo" onclick="openModal('foto2.jpg', 'Raphael no dia q estavamos jogando quem sou eu.')">
+            <img src="foto2.jpg" alt="Foto com Raphael">
+        </div>
+        <div class="photo" onclick="openModal('foto3.jpg', 'Bem aleatório.')">
+            <img src="foto3.jpg" alt="Eu nas plantas">
+        </div>
+        <div class="photo" onclick="openModal('foto4.jpg', 'Voltando do colégio com o joaquim, mesma rotina de sempre.')">
+            <img src="foto4.jpg" alt="Na volta do colégio com meu irmão">
+        </div>
+        <div class="photo" onclick="openModal('foto5.jpg', 'Com o Freitinhas, bem fofos.')">
+            <img src="foto5.jpg" alt="Meu amigo Freitas!!">
+        </div>
+        <div class="photo" onclick="openModal('foto6.jpg', 'Esse dia a turma foi para o farol')">
+            <img src="foto6.jpg" alt="Excursão para o farol">
+        </div>
+        <div class="photo" onclick="openModal('foto7.jpg', 'Eu e a Kety!')">
+            <img src="foto7.jpg" alt="Eu e minha amiga Ketlin">
+        </div>
+        <div class="photo" onclick="openModal('foto8.jpg', 'Com o grupinho do começo do ano.')">
+            <img src="foto8.jpg" alt="O grupo do fundo">
+        </div>
+        <div class="photo" onclick="openModal('foto9.jpg', 'Osvaldinho Drumdrum')">
+            <img src="foto9.jpg" alt="Osvaldinho Drumdrum">
+        </div>
+        <div class="photo" onclick="openModal('foto10.jpg', 'Lucas dormindo na sala, acho bem exemplar')">
+            <img src="foto10.jpg" alt="Meu amigo dormindo igual mendigo">
+        </div>
+        <div class="photo" onclick="openModal('foto11.jpg', 'Raphael na paz de Deus')">
+            <img src="foto11.jpg" alt="Chegamos atrasados e ficamos na capela">
+        </div>
+        <div class="photo" onclick="openModal('foto12.jpg', 'Alypher no dia mais calmo.')">
+            <img src="foto12.jpg" alt="Meu amigo tímido">
+        </div>
+        <div class="photo" onclick="openModal('foto13.jpg', 'Alypher sedutor.')">
+            <img src="foto13.jpg" alt="Alypher sedutor">
+        </div>
+        <div class="photo" onclick="openModal('foto14.jpg', 'Bem calminhos')">
+            <img src="foto14.jpg" alt="Bem calminhos">
+        </div>
+        <div class="photo" onclick="openModal('foto15.jpg', 'Foto com a Mari.')">
+            <img src="foto15.jpg" alt="Foto com minha amiga">
+        </div>
+        <div class="photo" onclick="openModal('foto16.jpg', 'Eu e o raphiel.')">
+            <img src="foto16.jpg" alt="Não lembro quantos anos tínhamos">
+        </div>
+        <div class="photo" onclick="openModal('foto17.jpg', 'O mendigo de novo! Dormindo em qualquer canto! 😂')">
+            <img src="foto17.jpg" alt="Mendigo de novo! 😂">
+        </div>
+        <div class="photo" onclick="openModal('foto18.jpg', 'Os meninos afeminados .')">
+            <img src="foto18.jpg" alt="Afeminados">
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Memórias Escolares - Obrigada Morelli</p>
+    </footer>
+
+    <script>
+        // Função para abrir o modal e exibir a imagem com a legenda
+        function openModal(src, captionText) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modalImg");
+            var caption = document.getElementById("caption");
+
+            modal.style.display = "flex"; // Mostra o modal
+            modalImg.src = src; // Define a imagem no modal
+            caption.innerHTML = captionText; // Define a legenda
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none"; // Oculta o modal
+        }
+    </script>
+</body>
+</html>
